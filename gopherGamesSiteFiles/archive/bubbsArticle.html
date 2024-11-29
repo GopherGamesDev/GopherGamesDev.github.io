@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>First Steps | Gopher Games</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="programming, JavaScript, gopher, gaming, filter, dev, development, web, web design, design, object" />
+	<meta name="description" content="A look at the first website I ever built" />
+	<link rel="icon" href="../images/logo2.ico" />
+	<link rel="stylesheet" type="text/css" href="../gopher.css" />
+	<script src="../gopherGames.js" defer></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="navBar">
+			<a id="logoLink" href="../home.html">
+				<div id="logoCont">
+					<img id="logo" class="desktop" src="../images/logo2.png" width=40 height=40 />
+					<img id="logoText" src="../images/logoText.png" />
+				</div>
+			</a>
+			<input name="Navigation Menu" class="navMenu" type="checkbox" id="navMenu" />
+				<label class="hambButton" for="navMenu"><span class="hambLine"></span></label>
+				<nav class="nav">
+					<ul id="navList">
+						<li><a href="../home.html">Home</a></li>
+						<li><a href="../projects.html">Projects</a></li>
+						<li><a href="../articles.html">Articles</a></li>
+						<li><a href="../about.html">About</a></li>
+					</ul>
+				</nav>
+		</div>
+		
+		<main>
+		<div id="article">
+			
+			<h1 id="artTitle">First Steps | Web Design</h1>
+			<p>About a month and a half into my study of web design I had my fill of one-off pages and projects. I wanted to sink my teeth into something meatier, to see if I could put together a more comprehensive site. I approached a good friend of mine about creating a site for his band, The BuBBs, and got to work. A few days, many setbacks, and a few triumphs later, and I was finished. 
+			</p>
+			
+			<p>Looking back on the project, I still believe it turned out quite well! The coloring, spacing, navigation, and integration of maps and other elements all turned out quite nicely. The elephant in the room is, obviously, the fact that it does not resize whatsoever. I had only been studying web design for roughly six weeks or so, and I wasn’t yet familiar with media queries, flexboxes, and other tools that can be used to better support a wide range of devices. That being said, so long as your monitor is large enough, I like to think it looks pretty good!
+			</p>
+			
+			<figure class="midscrn">
+				<img class="centerScrnsht" src="archiveImages/bubbsScreenshot.png" />
+				<figcaption class="centerCap">One of my favorite parts of the site. Not bad for 6 weeks!</figcaption>
+			</figure>
+			
+			<p>With the site being relatively sparse, I’d like to revisit it in the near future to make it responsive and perhaps shore up some areas that could use a little more content. In the meantime, feel free to peruse the site at your leisure using the link below.
+			</p>
+			
+			<div class="archiveLink"><a  href="bubbs/index.html" rel="noopener noreferrer" target="_blank">Check out the archive here!</a></div>
+			
+			<hr />
+			
+			<form id="subscribeBanner">
+				<p style="margin-bottom:.5em">Subscribe for alerts when new articles are posted<p>
+				<div style="text-align:center;">
+					<input type="text" id="subEmail" name="subscriberEmail" value="yourEmail@example.com" /><br />
+					<input type="button" id="subButton" value="Subscribe" /><br />
+					<label for="subscriberEmail" id="subErr"></label>
+				</div>
+			</form>
+		</div>
+		</main>
+		
+		<footer>
+			<div class="flex-grid">
+				<div class="column desktop" id="qLinks">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="../home.html">Home</a></li>
+						<li><a href="../projects.html">Projects</a></li>
+						<li><a href="../articles.html">Articles</a></li>
+						<li><a href="../about.html">About</a></li>
+					</ul>
+				</div>
+				<div class="flex-grid">
+					<div class="column" id="self">
+						<img id="selfPic" src="../images/me.png" />
+					</div>
+					<div class="column" id="selfLinks">
+						<h3>Mike Adams</h3>
+						<a href="mailto:GopherGames.Dev@gmail.com"><img src="../images/email.png" class="bannerIcon" alt="email icon" /> GopherGames.Dev@gmail.com</a><br />
+						<a href="https://www.linkedin.com/in/mike-adams-331881262" rel="noopener noreferrer" target="_blank"><img src="../images/LI-In-Bug.png" class="bannerIcon" alt="LinkedIn icon" /> LinkedIn</a><br />
+						<a href="." rel="noopener noreferrer" target="_blank"><img src="../images/github-mark-white.png" class="bannerIcon" alt="GitHub icon" /> GitHub</a><br />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

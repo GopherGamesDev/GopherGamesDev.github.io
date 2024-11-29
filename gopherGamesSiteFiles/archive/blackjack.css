@@ -1,0 +1,66 @@
+.blackjackButton{
+	background-color: var(--coffee);
+	border: 1px solid rgba(27, 31, 35, .15);
+	border-radius: 6px;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 600;
+	line-height: 20px;
+	padding: 6px 16px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+.playerSpace{
+	width: 90%;
+	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+canvas {
+	margin: 1em;
+}
+
+.playerControl{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	
+}
+
+.playerControl > p {
+	margin-bottom: .5em;
+	height: 24px;
+}
+
+.playerControl > button{
+	margin: 0.25em;
+}
+
+.playerControl > label {
+	font-size: 1.1em;
+}
+
+.playerControl > input{
+	margin-left: 0.3em;
+	width: 100px;
+	height: 20px;
+}
+
+#betVal{
+	color: black;
+}
+
+#deck{
+	margin-right: 100px;
+}
+
+@media (min-width: 900px) {
+	.playerSpace{
+		height: 189px;
+		flex-wrap: nowrap;
+	}
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Gopher Games | Home</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="game, video game, gopher, gaming, board game, dev, development" />
+	<meta name="description" content="The home page for Gopher Games, a site focused on game development, design, and analysis." />
+	<link rel="icon" href="images/logo2.ico" />
+	<link rel="stylesheet" type="text/css" href="gopher.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<script src="gopherGames.js" defer></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+	<script src="swiper.js" defer></script>
+	
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="navBar">
+			<a id="logoLink" href="home.html">
+				<div id="logoCont">
+					<img id="logo" class="desktop" src="images/logo2.png" width=40 height=40 />
+					<img id="logoText" src="images/logoText.png" />
+				</div>
+			</a>
+			<input name="Navigation Menu" class="navMenu" type="checkbox" id="navMenu" />
+				<label class="hambButton" for="navMenu"><span class="hambLine"></span></label>
+				<nav class="nav">
+					<ul id="navList">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="articles.html">Articles</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</nav>
+		</div>
+		
+		<main>	
+			<div class="swiper">
+			  <div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="archive/blackjack.html">
+						<img src="images/blackjackPic.jpg" />
+						<span>Building Blackjack | JavaScript</span>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="archive/fowlDamage.html">
+						<img src="images/fowldamage.jpg" />
+						<span>Fowl Damage (PC) | Review</span>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="archive/dunderArticle.html">
+						<img src="images/dunder.png" />
+						<span>Mobile First Design | Web Design</span>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="archive/filterArticle.html">
+						<img src="images/filterArtPic.jpg" />
+						<span>Building a Better Filter | JavaScript</span>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="archive/metal_gear.html">
+						<img src="images/metalGear.jpg" />
+						<span>Metal Gear (MSX2) | Review</span>
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="archive/bubbsArticle.html">
+						<img src="images/bubbs.gif" />
+						<span>First Steps | Web Design</span>
+					</a>
+				</div>
+			  </div>
+			  <div class="swiper-pagination"></div>
+			  <div class="swiper-button-prev"></div>
+			  <div class="swiper-button-next"></div>
+			</div>
+			
+			<div class="evenBox">
+				<div class="secBox">
+					<a href="projects.html">Projects</a>
+					<a href="projects.html"><div class="centerImg"><img class="secPic" src="images/gameDev.jpg" /></div></a>
+					<p>A showcase of previous and on-going projects relating to programming and web design.
+					</p>
+				</div>
+				<div class="secBox">
+					<a href="articles.html">Articles</a>
+					<a href="articles.html"><div class="centerImg"><img class="secPic" src="images/journal.jpg" /></div></a>
+					<p>A collection of reviews, opinion pieces, and other writings on video games, boardgames, and more
+					</p>
+				</div>
+			</div>
+		</main>
+		
+		<footer>
+			<div class="flex-grid" id="footerBanner">
+				<div class="column desktop" id="qLinks">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="home.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="articles.html">Articles</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</div>
+				<div class="flex-grid">
+					<div class="column" id="self">
+						<a href="about.html">
+							<img id="selfPic" src="images/me.png" />
+						</a>
+					</div>
+					<div class="column" id="selfLinks">
+						<a href="about.html"><h3>Mike Adams</h3></a>
+						<a href="mailto:GopherGames.Dev@gmail.com"><img src="images/email.png" class="bannerIcon" alt="email icon" /> GopherGames.Dev@gmail.com</a><br />
+						<a href="https://www.linkedin.com/in/mike-adams-331881262" rel="noopener noreferrer" target="_blank"><img src="images/LI-In-Bug.png" class="bannerIcon" alt="LinkedIn icon" /> LinkedIn</a><br />
+						<a href="inactive" rel="noopener noreferrer" target="_blank"><img src="images/github-mark-white.png" class="bannerIcon" alt="GitHub icon" /> GitHub</a><br />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

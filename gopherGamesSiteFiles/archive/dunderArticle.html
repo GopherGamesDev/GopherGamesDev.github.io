@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Responsive Design | Gopher Games</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="programming, JavaScript, gopher, gaming, filter, dev, development, web, web design, design, object" />
+	<meta name="description" content="An introduction to my first attempt at creating a responsive website" />
+	<link rel="icon" href="../images/logo2.ico" />
+	<link rel="stylesheet" type="text/css" href="../gopher.css" />
+	<script src="../gopherGames.js" defer></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="navBar">
+			<a id="logoLink" href="../home.html">
+				<div id="logoCont">
+					<img id="logo" class="desktop" src="../images/logo2.png" width=40 height=40 />
+					<img id="logoText" src="../images/logoText.png" />
+				</div>
+			</a>
+			<input name="Navigation Menu" class="navMenu" type="checkbox" id="navMenu" />
+				<label class="hambButton" for="navMenu"><span class="hambLine"></span></label>
+				<nav class="nav">
+					<ul id="navList">
+						<li><a href="../home.html">Home</a></li>
+						<li><a href="../projects.html">Projects</a></li>
+						<li><a href="../articles.html">Articles</a></li>
+						<li><a href="../about.html">About</a></li>
+					</ul>
+				</nav>
+		</div>
+		
+		<main>
+		<div id="article">
+			
+			<h1 id="artTitle">Tackling Mobile First Design | Web Design</h1>
+			
+			<p>A couple months after I completed my <a class="accentColor" rel="noopener noreferrer" target="_blank" href="bubbsArticle.html">first website,</a> I was itching to take on a new project. The more I had learned about responsive design, the more frustrated I had become with my previous website. “If only I had done that!” and “This would have been perfect for that page!” I would think. Tempting though it was to update my previous site, I instead decided to start fresh—it would give me a point of comparison.
+			</p>
+			
+			<p>This time around, I decided to base my website on something that would be easy to source images for, the Dunder Mifflin paper company of The Office. I looked to real world paper companies for a few examples and began my work. My number one focus was on having a site that would display well on mobile devices, perhaps to the point of my detriment. Still, I am largely happy with the result, the CSS driven hamburger menu was quite an effort (and one that I reused for Gopher Gaming!) and the products and about us pages both looked great on mobile without sacrificing the desktop experience. In contrast, the community page shakes things up with a nifty interactive image gallery for larger displays and some integrated Google maps. This page is well worth looking into!
+			</p>
+			
+			<figure class="midscrn">
+				<img class="centerScrnsht" src="archiveImages/dunder1.png" />
+				<figcaption class="centerCap">Visit the site to see what happens when you mouse over these!</figcaption>
+			</figure>
+			
+			<p>Reviewing the site now, I can’t help but think the margins can be quite slim at some resolutions. The product descriptions could also do with one less horizontal rule, the prices feel too disjointed. The contact form is also rather barebones and would benefit from another pass. But don’t just take my word for it; have a look for yourself!
+			</p>
+			
+			<div class="archiveLink"><a  href="dunder/index.html" rel="noopener noreferrer" target="_blank">Check out the archive here!</a></div>
+			
+			<hr />
+			
+			<form id="subscribeBanner">
+				<p style="margin-bottom:.5em">Subscribe for alerts when new articles are posted<p>
+				<div style="text-align:center;">
+					<input type="text" id="subEmail" name="subscriberEmail" value="yourEmail@example.com" /><br />
+					<input type="button" id="subButton" value="Subscribe" /><br />
+					<label for="subscriberEmail" id="subErr"></label>
+				</div>
+			</form>
+		</div>
+		</main>
+		
+		<footer>
+			<div class="flex-grid">
+				<div class="column desktop" id="qLinks">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="../home.html">Home</a></li>
+						<li><a href="../projects.html">Projects</a></li>
+						<li><a href="../articles.html">Articles</a></li>
+						<li><a href="../about.html">About</a></li>
+					</ul>
+				</div>
+				<div class="flex-grid">
+					<div class="column" id="self">
+						<img id="selfPic" src="../images/me.png" />
+					</div>
+					<div class="column" id="selfLinks">
+						<h3>Mike Adams</h3>
+						<a href="mailto:GopherGames.Dev@gmail.com"><img src="../images/email.png" class="bannerIcon" alt="email icon" /> GopherGames.Dev@gmail.com</a><br />
+						<a href="https://www.linkedin.com/in/mike-adams-331881262" rel="noopener noreferrer" target="_blank"><img src="../images/LI-In-Bug.png" class="bannerIcon" alt="LinkedIn icon" /> LinkedIn</a><br />
+						<a href="." rel="noopener noreferrer" target="_blank"><img src="../images/github-mark-white.png" class="bannerIcon" alt="GitHub icon" /> GitHub</a><br />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Gopher Games | About</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="game, video game, gopher, gaming, board game, dev, development" />
+	<meta name="description" content="The about page for Gopher Games, learn about my mission and goals." />
+	<link rel="icon" href="images/logo2.ico" />
+	<link rel="stylesheet" type="text/css" href="gopher.css" />
+	<script src="gopherGames.js" defer></script>
+	<script src="contactForm.js" defer></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="navBar">
+			<a id="logoLink" href="home.html">
+				<div id="logoCont">
+					<img id="logo" class="desktop" src="images/logo2.png" width=40 height=40 />
+					<img id="logoText" src="images/logoText.png" />
+				</div>
+			</a>
+			<input name="Navigation Menu" class="navMenu" type="checkbox" id="navMenu" />
+				<label class="hambButton" for="navMenu"><span class="hambLine"></span></label>
+				<nav class="nav">
+					<ul id="navList">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="articles.html">Articles</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</nav>
+		</div>
+		
+		<main>
+			<div class="flex-grid">
+				<div id="aboutTxt" class="two-thirdCol">
+					<h1>Programming for Everyone</h1>
+					<p>Learning has been a lifelong passion of mine. Whether it be as a teacher or as a student
+					I am always striving to better both myself and my community. Programming and website design
+					have recently become one of my main focuses; unfortunately, I believe that many people
+					have trouble getting their foot in the door--especially with more complex projects
+					like game development.
+					</p>
+					<p>With this site, I'm hoping to document my own growth, projects, and struggles in order to
+					provide an in-depth look at the development process behind both software and websites.
+					In doing so, I hope to inspire more people to pick up coding in some form and take pride
+					in the little successes--and failures--along the way!
+					</p>
+				</div>
+				<div id="aboutPic" class="one-thirdCol">
+					<figure>
+						<img src="images/me.png" />
+						<figcaption>Mike Adams</figcaption>
+					</figure>
+				</div>
+			</div>
+			
+			<hr class="frame" />
+				<h1 style="text-align:center">Contact Me</h1>
+				<hr class="frame" />
+				<div class="contact">
+					<form id="contactForm">
+						<label for="firstName">First Name*</label>
+						<input type="text" class="contactText" id="firstName" name="firstName" placeholder="Your name..." maxlength="35" required />
+
+						<label for="lastName">Last Name*</label>
+						<input type="text" class="contactText" id="lastName" name="lastName" placeholder="Your last name..." maxlength="35" required />
+						
+						<label for="company">Company</label>
+						<input type="text" class="contactText" id="company" name="company" placeholder="Your company..." maxlength="70" />
+						
+						<label for="email">E-mail Address*</label>
+						<input type="text" class="contactText" id="email" name="email" placeholder="Your E-mail Address..." required maxlength="70" />
+						
+						<label for="phoneNum">Phone Number</label>
+						<input type="text" class="contactText" id="phoneNum" name="phoneNum" placeholder="(123) 456-7890" />
+						
+						<label for="purpose">Purpose</Label>
+						<select name="purpose" id="purpose">
+							<option value="">Web Development</option>
+							<option value="">Game Development</option>
+							<option value="">Contributing Article</option>
+							<option value="">Education</option>
+							<option value="">Personal</option>
+						</select>
+						
+						<br />
+						<label>Join our mailing list?</label><br />
+							<input type="radio" id="yes" name="mailingList" value="yes" checked="checked" />
+							<label for="yes">Yes</label><br />
+							<input type="radio" id="no" name="mailingList" value="no" />
+							<label for="no">No</label><br /><br />
+						
+						<label for="comments">Additional Comments</label><br />
+						<textarea cols="200" rows="6" id="comments" name="comments" placeholder="How can we assist you?" maxlength="2400"></textarea>
+  
+						<input type="button" id="contactSubmit" value="Submit" />
+					</form>
+				</div>
+			
+		</main>
+		
+		<footer>
+			<div class="flex-grid">
+				<div class="column desktop" id="qLinks">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="home.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="articles.html">Articles</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</div>
+				<div class="flex-grid">
+					<div class="column" id="selfLinks">
+						<h3>Mike Adams</h3>
+						<a href="mailto:GopherGames.Dev@gmail.com"><img src="images/email.png" class="bannerIcon" alt="email icon" /> GopherGames.Dev@gmail.com</a><br />
+						<a href="https://www.linkedin.com/in/mike-adams-331881262" rel="noopener noreferrer" target="_blank"><img src="images/LI-In-Bug.png" class="bannerIcon" alt="LinkedIn icon" /> LinkedIn</a><br />
+						<a href="inactive" rel="noopener noreferrer" target="_blank"><img src="images/github-mark-white.png" class="bannerIcon" alt="GitHub icon" /> GitHub</a><br />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

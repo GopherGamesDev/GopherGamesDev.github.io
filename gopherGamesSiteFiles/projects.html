@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Gopher Games | Projects</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="game, video game, gopher, gaming, board game, dev, development" />
+	<meta name="description" content="The projects page for Gopher Games. Development diaries, code samples, prototypes, demos, and more are available." />
+	<link rel="icon" href="images/logo2.ico" />
+	<link rel="stylesheet" type="text/css" href="gopher.css" />
+	<script src="filter.js" defer></script>
+	<script src="gopherGames.js" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="navBar">
+			<a id="logoLink" href="home.html">
+				<div id="logoCont">
+					<img id="logo" class="desktop" src="images/logo2.png" width=40 height=40 />
+					<img id="logoText" src="images/logoText.png" />
+				</div>
+			</a>
+			<input name="Navigation Menu" class="navMenu" type="checkbox" id="navMenu" />
+				<label class="hambButton" for="navMenu"><span class="hambLine"></span></label>
+				<nav class="nav">
+					<ul id="navList">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="articles.html">Articles</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</nav>
+		</div>
+		
+		<main>
+			<div id="dropdownSwitch"><p class="filtersTxt">Filters</p><div class="drpArrow" id="filterArrow"></div></div>
+			<ul class="dropdwn" id="filterMenu">
+				<li id="filterList1">
+					<div class="checkbox-wrapper">
+						<input type="checkbox" class="contentControl" id="filter1" checked />
+						<label for="filter1" class="toggle"><span></span></label>
+					</div>
+					<div class="filterLabel">
+						<p>Games &#38; Demos</p>
+					</div>
+				</li>
+					
+				<li>
+					<div class="checkbox-wrapper">
+						<input type="checkbox" class="contentControl" id="filter2" checked />
+						<label for="filter2" class="toggle"><span></span></label>
+					</div>
+					<div class="filterLabel">
+						<p>Web Design</p>
+					</div>
+				</li>
+					
+				<li>
+					<div class="checkbox-wrapper">
+						<input type="checkbox" class="contentControl" id="filter3" checked />
+						<label for="filter3" class="toggle"><span></span></label>
+					</div>
+					<div class="filterLabel">
+						<p>JavaScript</p>
+					</div>
+				</li>
+			</ul>
+			
+			<div class="evenBox">
+				<div class="filter1 filter3 secBox">
+					<a href="archive/blackjack.html">Building Blackjack</a>
+					<a href="archive/blackjack.html"><div class="centerImg"><img class="squaredPic" src="images/blackjackPic.jpg" /></div></a>
+					<p>Play blackjack in your browser and read about my first attempt at building a game in JavaScript.
+					</p>
+				</div>
+				<div class="filter3 secBox">
+					<a href="archive/filterArticle.html">Building a Better Filter</a>
+					<a href="archive/filterArticle.html"><div class="centerImg"><img class="squaredPic" src="images/filterArtPic.jpg" /></div></a>
+					<p>A look at the evolution of Gopher Game's article filter system and the lessons learned.
+					</p>
+				</div>
+				<div class="filter2 secBox">
+					<a href="archive/dunderArticle.html">Mobile First Design</a>
+					<a href="archive/dunderArticle.html"><div class="centerImg"><img class="squaredPic" src="images/dunder.png" /></div></a>
+					<p>A look at the second website I ever designed with a focus on creating responsive pages.
+					</p>
+				</div>
+				<div class="filter2 secBox">
+					<a href="archive/bubbsArticle.html">First Steps</a>
+					<a href="archive/bubbsArticle.html"><div class="centerImg"><img class="squaredPic" src="images/bubbs.gif" /></div></a>
+					<p>A retrospective on the first website I ever created complete with a full archive of the site.
+					</p>
+				</div>
+			</div>
+		</main>
+		
+		<footer>
+			<div class="flex-grid">
+				<div class="column desktop" id="qLinks">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="home.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="articles.html">Articles</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</div>
+				<div class="flex-grid">
+					<div class="column" id="self">
+						<img id="selfPic" src="images/me.png" />
+					</div>
+					<div class="column" id="selfLinks">
+						<h3>Mike Adams</h3>
+						<a href="mailto:GopherGames.Dev@gmail.com"><img src="images/email.png" class="bannerIcon" alt="email icon" /> GopherGames.Dev@gmail.com</a><br />
+						<a href="https://www.linkedin.com/in/mike-adams-331881262" rel="noopener noreferrer" target="_blank"><img src="images/LI-In-Bug.png" class="bannerIcon" alt="LinkedIn icon" /> LinkedIn</a><br />
+						<a href="inactive" rel="noopener noreferrer" target="_blank"><img src="images/github-mark-white.png" class="bannerIcon" alt="GitHub icon" /> GitHub</a><br />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

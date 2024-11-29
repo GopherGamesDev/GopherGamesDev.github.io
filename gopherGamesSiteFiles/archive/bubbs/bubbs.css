@@ -1,0 +1,275 @@
+body {
+	background-image: url("images/bubbs_tile.gif");
+	font-family: Signika Negative, verdana, tahoma, sans-serif;
+	color: #FFFFFF;
+	font-size: 1.2em;
+	overflow: auto;
+}
+
+main {
+	background-color: #000000;
+}
+
+#wrapper {
+	background-color: #000000;
+	min-width: 1700px;
+	max-width: 1800px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+
+header {
+	background-color: #000000;
+	background-image: url("images/Bubbs_2017_Header6.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 260px;
+	width: 90%;
+	min-width: 1700px;
+	max-width: 1800px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav {
+	height: 50px;
+	background-color: #000000;
+	border-top: 2px solid #926f34;
+	border-bottom: 2px solid #926f34;
+	padding-bottom: 2em;
+	margin: 0;
+	position: sticky;
+	top: 0;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav li{
+	color: #926f34;
+	display: inline;
+}
+
+nav a{
+	background-color: #000000;
+	border: 0 solid #e2e8f0;
+	border-radius: 1.5em;
+	color: #926f34;
+	display: inline-block;
+	font-size: 1.6em;
+	font-weight: 600;
+	line-height: 0;
+	padding: 1em 1.6em;
+	text-align: center;
+	text-decoration: none;
+}
+
+nav a.current{
+	text-decoration: underline #926f34;
+}
+
+nav a:hover {
+	background-color: #926f34;
+	color: #000000;
+}
+
+h1 {
+	font-family: Ultra, verdana, tahoma, sans-serif;
+	font-size: 5em;
+	text-align: center;
+}
+
+h2 {
+	font-family: Signika Negative, verdana, tahoma, sans-serif;
+	font-size: 4.5em;
+}
+
+h2 a{
+	text-decoration: none;
+}
+
+h2 a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+h2 a:hover {
+	text-decoration: none;
+	color: #926f34;
+}
+
+h2.venue {
+	margin-bottom: .2em;
+}
+
+ul.dates {
+	text-align: center;
+	list-style-type: none;
+	margin-top: .2em;
+	font-size: 2em;
+}
+
+.buttonbelow {
+	margin: 0.1em;
+}
+
+.album {
+	margin: 2em;
+	padding-top: 0em;
+	padding-bottom: 1em;
+	width: 500px; 
+	height: 500px;
+}
+
+.button {
+	background-color: #926f34;
+	border: 0 solid #e2e8f0;
+	border-radius: 1.5em;
+	color: #000000;
+	display: inline-block;
+	font-size: 1.5em;
+	font-weight: 600;
+	line-height: 0;
+	padding: 1em 1.6em;
+	text-align: center;
+	text-decoration: none;
+	padding-bottom: 1em;
+}
+
+.button:hover {
+	background-color: #FFFFFF;
+	color: #000000;
+}
+
+.column {
+	float: left;
+	text-align:center;
+	background-color: #000000;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.left{
+	width: 50%;
+}
+
+.right {
+	width: 50%;
+}
+
+#home {
+	text-align:center;
+	background-color: #000000;
+	margin-top: 16em;
+	margin-bottom: 2em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer {
+	background-color: #000000;
+	color: #926f34;
+	font-size: 1em;
+	text-align: center;
+	margin: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2em;
+}
+
+footer ul {
+	list-style-type: none;
+	margin-right: 4em;
+}
+
+footer li{
+	color: #926f34;
+	display: inline;
+	padding: 1em 1em;
+}
+
+footer a {
+	color: #926f34;
+	text-decoration: none
+}
+
+footer a:visited {
+	color: #926f34;
+	text-decoration: none
+}
+
+footer a:hover {
+	color: #FFFFFF;
+	text-decoration: underline #FFFFFF
+}
+
+.divider {
+	max-width: 1650px;
+	width: 95%;
+	text-align: center;
+	border-color: #926f34;
+	border-bottom-width: .4em;
+	clear: none;
+}
+
+.clear {
+	clear: none;
+}
+
+.address {
+	font-size: 1.4em;
+}
+
+.trackList {
+	text-align: left;
+	margin-left: 25%;
+	font-size: 1.5em;
+}
+
+.track {
+	padding-top: .25em;
+	padding-bottom: .25em;
+}
+
+.albumTitle {
+	margin-bottom: 0em;
+}
+
+.albumCover {
+	margin-top: 25%;
+	border: 0; 
+	width: 500px; 
+	height: 500px;
+}
+
+#heroText {
+	font-size: 7.5em;
+	text-align: center;
+	margin-bottom: .3em;
+}
+
+#bandPic {
+	display: block;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.fourColumn {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.oneFourth {
+	float: left;
+	width: 25%;
+}
+
+.bandMem {
+	text-align: center;
+	margin-top: 0;
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Blackjack | Gopher Games</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="game, video game, gopher, gaming, board game, dev, development, blackjack, JavaScript, drag and drop" />
+	<meta name="description" content="A JavaScript powered blackjack game utilizing drag and drop api" />
+	<link rel="icon" href="../images/logo2.ico" />
+	<link rel="stylesheet" type="text/css" href="../gopher.css" />
+	<link rel="stylesheet" type="text/css" href="blackjack.css" />
+	<script src="../gopherGames.js" defer></script>
+	<script src="blackjack.js" defer></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="navBar">
+			<a id="logoLink" href="../home.html">
+				<div id="logoCont">
+					<img id="logo" class="desktop" src="../images/logo2.png" width=40 height=40 />
+					<img id="logoText" src="../images/logoText.png" />
+				</div>
+			</a>
+			<input name="Navigation Menu" class="navMenu" type="checkbox" id="navMenu" />
+				<label class="hambButton" for="navMenu"><span class="hambLine"></span></label>
+				<nav class="nav">
+					<ul id="navList">
+						<li><a href="../home.html">Home</a></li>
+						<li><a href="../projects.html">Projects</a></li>
+						<li><a href="../articles.html">Articles</a></li>
+						<li><a href="../about.html">About</a></li>
+					</ul>
+				</nav>
+		</div>
+		
+		<main>
+		
+		<div class="flex-grid playerSpace" id="dealer">
+		</div>
+		<hr />
+		<div class="flex-grid playerSpace" id="player">
+		
+		</div>
+		<div class="playerControl">
+			<p id="win"></p>
+			<p id="chips">Current Chips: </p>
+			<button type="button" class="blackjackButton" id="start">Deal</button>
+			<button type="button" class="blackjackButton" id="hit" disabled="true">Hit</button>
+			<button type="button" class="blackjackButton" id="stand" disabled="true">Stand</button>
+			<label for="bet">Bet</label>
+			<input name="bet" type="number" id="betVal" min=1 placeholder="Place your bet" />
+		</div>
+		<hr />
+		<div id="article">
+			
+			<h1 id="artTitle">Building Blackjack</h1>
+			<p>Have you ever played a flash game? I have fond memories of playing the massive online collections of games after school, and I wanted to add something similar to the site. Javascript may not be Flash, but Actionscript is relatively similar. Being my first attempt at putting together a game in JavaScript, I thought it best to keep it simple and stick to a classic: blackjack. Interestingly, due to the nature of how blackjack is played and the decision to use a few buttons to control user input, I chose to forego the constant loop that is often associated with core game logic. Instead, each button invokes a series of functions that resolve the necessary steps.
+			</p>
+			
+			<p>Structurally speaking, the code is straightforward. We have the Blackjack object which contains the game logic and holds the other components: the player, dealer, and deck. The player and dealer are both instances of the same class, Player,  which stores cards in hand, displays cards to the page, and tracks the player’s chips. The deck, as one would expect, holds 52 distinct cards and has the ability to shuffle and deal cards. Speaking of cards, each is an object with its suit and rank. The class also includes the necessary code to draw cards to canvas elements.
+			</p>
+			
+			<p>This was my first time working with a sprite sheet and the canvas HTML element. I was prepared to spend a few hours working out the kinks of displaying the cards correctly, but to my surprise I found it quite simple and had no trouble at all! In fact, I only ran into one main issue. While I had never intended to include animations for dealing cards, I had hoped to add a delay between the dealt cards and the flipping of cards (I encourage you to try setting a breakpoint in your terminal on line 416, the hit function, the cards are actually dealt facedown and then flipped!) Unfortunately, there is no simple sleep function native to JavaScript, and I was unable to create a workable equivalent. I did attempt to find a workaround with asynchronous functions and other tools, but I was unable to achieve the desired result. While I could achieve the “animation” I had been hoping for, the game would, at times, break and the terminal was completely unusable.
+			</p>
+			
+			<p>Unfortunately, I didn’t make a fully comprehensive blackjack simulator. There’s no double down action (though I would like to add one and it would be simple to integrate), pairs can’t be split (more involved) and the user interface for the game could do with a facelift. Likewise, over the course of the project I came to see some room for improvement:
+			</p>
+			
+			<ul>
+				<li>The switch statement for getOffset is verbose. A map or array of values may have simplified the process</li>
+				<li>In retrospect I would have placed the canvas management and drawing in a separate object. The portability would have been nice</li>
+				<li>I decided to disable button based on game state late into development. Were I to revisit the program, I would move these lines to a new function to reduce redundant code.</li>
+				<li>Rather than set constant scalar for the card sprites, I would have determined it dynamically from media queries</li>
+			</ul>
+
+			
+		<hr />
+			
+			<form id="subscribeBanner">
+				<p style="margin-bottom:.5em">Subscribe for alerts when new articles are posted<p>
+				<div style="text-align:center;">
+					<input type="text" id="subEmail" name="subscriberEmail" value="yourEmail@example.com" /><br />
+					<input type="button" id="subButton" value="Subscribe" /><br />
+					<label for="subscriberEmail" id="subErr"></label>
+				</div>
+			</form>
+		</main>
+	
+		<footer>
+			<div class="flex-grid">
+				<div class="column desktop" id="qLinks">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="../home.html">Home</a></li>
+						<li><a href="../projects.html">Projects</a></li>
+						<li><a href="../articles.html">Articles</a></li>
+						<li><a href="../about.html">About</a></li>
+					</ul>
+				</div>
+				<div class="flex-grid">
+					<div class="column" id="self">
+						<img id="selfPic" src="../images/me.png" />
+					</div>
+					<div class="column" id="selfLinks">
+						<h3>Mike Adams</h3>
+						<a href="mailto:GopherGames.Dev@gmail.com"><img src="../images/email.png" class="bannerIcon" alt="email icon" /> GopherGames.Dev@gmail.com</a><br />
+						<a href="https://www.linkedin.com/in/mike-adams-331881262" rel="noopener noreferrer" target="_blank"><img src="../images/LI-In-Bug.png" class="bannerIcon" alt="LinkedIn icon" /> LinkedIn</a><br />
+						<a href="." rel="noopener noreferrer" target="_blank"><img src="../images/github-mark-white.png" class="bannerIcon" alt="GitHub icon" /> GitHub</a><br />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Gopher Games | Articles</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="game, video game, gopher, gaming, board game, dev, development" />
+	<meta name="description" content="The articles page for Gopher Games. Features writing on game design, programming and web development, and reviews." />
+	<link rel="icon" href="images/logo2.ico" />
+	<link rel="stylesheet" type="text/css" href="gopher.css" />
+	<script src="filter.js" defer></script>
+	<script src="gopherGames.js" defer></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="navBar">
+			<a id="logoLink" href="home.html">
+				<div id="logoCont">
+					<img id="logo" class="desktop" src="images/logo2.png" width=40 height=40 />
+					<img id="logoText" src="images/logoText.png" />
+				</div>
+			</a>
+			<input name="Navigation Menu" class="navMenu" type="checkbox" id="navMenu" />
+				<label class="hambButton" for="navMenu"><span class="hambLine"></span></label>
+				<nav class="nav">
+					<ul id="navList">
+						<li><a href="home.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="articles.html">Articles</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</nav>
+		</div>
+		
+		<main>
+			<div id="dropdownSwitch"><p class="filtersTxt">Filters</p><div class="drpArrow" id="filterArrow"></div></div>
+			<ul class="dropdwn" id="filterMenu">
+				<li id="filterList1">
+					<div class="checkbox-wrapper">
+						<input type="checkbox" class="contentControl" id="filter1" checked />
+						<label for="filter1" class="toggle"><span></span></label>
+					</div>
+					<div class="filterLabel">
+						<p>Video Game</p>
+					</div>
+				</li>
+					
+				<li>
+					<div class="checkbox-wrapper">
+						<input type="checkbox" class="contentControl" id="filter2" checked />
+						<label for="filter2" class="toggle"><span></span></label>
+					</div>
+					<div class="filterLabel">
+						<p>Board Game</p>
+					</div>
+				</li>
+								
+				<li>
+					<div class="checkbox-wrapper">
+						<input type="checkbox" class="contentControl" id="filter3" checked />
+						<label for="filter3" class="toggle"><span></span></label>
+					</div>
+					<div class="filterLabel">
+						<p>Review</p>
+					</div>
+				</li>
+				
+				<li>
+					<div class="checkbox-wrapper">
+						<input type="checkbox" class="contentControl" id="filter4" checked />
+						<label for="filter4" class="toggle"><span></span></label>
+					</div>
+					<div class="filterLabel">
+						<p>Opinion</p>
+					</div>
+				</li>
+			</ul>
+		
+			<div class="evenBox">
+				<div class="filter1 filter3 secBox">
+					<a href="archive/fowlDamage.html">Fowl Damage<br />Review</a>
+					<a href="archive/fowlDamage.html"><div class="centerImg"><img class="squaredPic" src="images/fowldamage.jpg" /></div></a>
+					<p>One-button platforming with incredible depth: carefully manage your jumps and falls to avoid becoming scrambled!
+					</p>
+				</div>
+				
+				<div class="filter1 filter3 secBox" id="metalGear">
+					<a href="archive/metal_gear.html">Metal Gear (MSX2)<br />Review</a>
+					<a href="archive/metal_gear.html"><div class="centerImg"><img class="squaredPic" src="images/metalGear.jpg" /></div></a>
+					<p>Taking a closer look at the game that revolutionized the stealth genre and began 
+						Hideo Kojima's legendary saga of Solid Snake.
+					</p>
+				</div>		
+			</div>
+		</main>
+		
+		<footer>
+			<div class="flex-grid">
+				<div class="column desktop" id="qLinks">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="home.html">Home</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="articles.html">Articles</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</div>
+				<div class="flex-grid">
+					<div class="column" id="self">
+						<img id="selfPic" src="images/me.png" />
+					</div>
+					<div class="column" id="selfLinks">
+						<h3>Mike Adams</h3>
+						<a href="mailto:GopherGames.Dev@gmail.com"><img src="images/email.png" class="bannerIcon" alt="email icon" /> GopherGames.Dev@gmail.com</a><br />
+						<a href="https://www.linkedin.com/in/mike-adams-331881262" rel="noopener noreferrer" target="_blank"><img src="images/LI-In-Bug.png" class="bannerIcon" alt="LinkedIn icon" /> LinkedIn</a><br />
+						<a href="inactive" rel="noopener noreferrer" target="_blank"><img src="images/github-mark-white.png" class="bannerIcon" alt="GitHub icon" /> GitHub</a><br />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>

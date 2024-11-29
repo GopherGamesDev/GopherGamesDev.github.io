@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<title>Filterint Content | Javascript</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="keywords" content="programming, JavaScript, gopher, gaming, filter, dev, development, web, web design, design, object" />
+	<meta name="description" content="The evolution of Gopher Game's content filter system" />
+	<link rel="icon" href="../images/logo2.ico" />
+	<link rel="stylesheet" type="text/css" href="../gopher.css" />
+	<script src="../gopherGames.js" defer></script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div class="navBar">
+			<a id="logoLink" href="../home.html">
+				<div id="logoCont">
+					<img id="logo" class="desktop" src="../images/logo2.png" width=40 height=40 />
+					<img id="logoText" src="../images/logoText.png" />
+				</div>
+			</a>
+			<input name="Navigation Menu" class="navMenu" type="checkbox" id="navMenu" />
+				<label class="hambButton" for="navMenu"><span class="hambLine"></span></label>
+				<nav class="nav">
+					<ul id="navList">
+						<li><a href="../home.html">Home</a></li>
+						<li><a href="../projects.html">Projects</a></li>
+						<li><a href="../articles.html">Articles</a></li>
+						<li><a href="../about.html">About</a></li>
+					</ul>
+				</nav>
+		</div>
+		
+		<main>
+		<div id="article">
+			
+			<h1 id="artTitle">Building a Better Filter</h1>
+			<p>At its core, the Gopher Games website is a collection of (often disparate) articles. While the separation of the content I post into two major groupings, projects and opinions, does a lot to help users sift through the content, I knew from the site’s inception that one of the first things I wanted to include was the ability to filter out content. The filters have seen more iterations than most aspects of the site, and by chronicling their growth, I hope to outline key areas that I had failed to anticipate, the small victories, and where I plan to take them from here.
+			</p>
+			
+			<h1>The First Pass</h1>
+			<figure class="right inline">
+				<img class="rightScrnsht" src="archiveImages/filterPic1.png" />
+				<figcaption class="rightCap">Simple, but limited</figcaption>
+			</figure>
+			<p>The initial implementation of the filters was basic. I styled a few checkboxes to act as switches (and these are still the same today!) and applied an event listener to each one that would call a single function toggleFilter passing it a list of elements with the relevant class, “filt1, filt2…. filtn”.
+			</p>
+			
+			<p>The toggleFilter function would then loop through the list and apply a jQuery function, fadeToggle, to each element resulting in a smooth transition. This served as a decent enough starting point, but it had a few problems. The first, and most glaring, was that nothing tracked the state of articles which were affected by more than one filter. This meant that toggling off any given filter had  a chance to cause elements hidden by a different filter to fade back in inadvertently. In the coming designs, we’ll see how I ultimately decided to tackle that. More concerning to me, however, was how rigid this system was. It was difficult to work with and not at all portable. The hard coding of filter names required that elements in the html adhere to its naming scheme, and the addition of new filters would require new lines of code. Long term, this was a poor solution.
+			</p>
+			
+			<h1>Objectifying the Filter</h1>
+		
+			<p>What better way to solve a portability problem than creating an object? Well, unfortunately, a desire to cram as much of the system as possible into my filter and streamline my general JavaScript file was about as effective as cleaning a room by stowing everything in the closet. Sure, I only needed two lines to verify that the page had a filter and then create a new object that would handle everything else—and that certainly looked sleek—but a peek behind the curtain told a whole different story. The system was still dependent upon having specific class names, and even IDs, to function properly. It also required the same checkbox style user control, offering no recourse for those seeking other solutions. Incredibly, I had made this <i>less</i> portable!
+			</p>
+			
+			<figure class="midscrn">
+				<img class="centerScrnsht" src="archiveImages/filterPic2.png" />
+				<figcaption class="centerCap">The filter will find everything, but at what cost?</figcaption>
+			</figure>
+			
+			<p>Getting away from the doom and gloom for a moment, let’s look at a few new features that did improve the system. In the screenshot below we can see the updateFilters method which was now called after toggling a filter control. Setting aside the dubious decision of using a regular expression to compare the list of active filters to the class names of the filterable elements, we now had a way of ensuring that our content stayed hidden when the user didn’t need it. This implementation would also make use of session storage to maintain the state of the filters, a nice quality of life change. The decision to store everything in a series of arrays also made the storage and retrieval of the relevant data quite easy, that was a win!
+			</P>
+			
+			<figure class="midscrn">
+				<img class="centerScrnsht" src="archiveImages/filterPic3.png" />
+				<figcaption class="centerCap">The regex required far more effort than just tracking visibiility</figcaption>
+			</figure>
+			
+			<h1>Less is More</h1>
+			
+			<p>My last pass at the filter had left me less than satisfied. I still couldn’t easily move any of the code I had created to a new site. There were too many dependencies, and the filter object was responsible for far, far too much. I elected to return to square one and build it back from the ground up. This time around, I made a few major changes:
+			</p>
+			
+			<ul>
+				<li>The developer would be responsible for passing the relevant class names for filterable items.</li>
+				<li>The developer would also need to provide any elements that they wanted affected by the user.</li>
+				<li>A second class, FilterableItem existed inside of Filter and would hold the element and control its visibility</li>
+				<li>The developer would need to configure their own control system and have it call toggleFilter via the filter object.</li>
+			</ul>
+			
+			<figure class="left inline">
+				<img class="leftScrnsht" src="archiveImages/filterPic4.png" />
+				<figcaption class="leftCap">A much more streamlined approach!</figcaption>
+			</figure>
+			
+			<p>Now I had system with largely only one requirement: all filterable elements needed to be grouped by (developer supplied) class names. Not too shabby! It would also require the rigging of one’s own control system, and I chose to stick with my checkboxes, but this allowed for a lot of flexibility. Although there was some temptation to allow developers to pass along certain controls to the filter as arguments to hand off control, I ultimately chose to forego that in fear that it might serve only to limit the scope of the filter’s application. Similarly, the user is responsible for grabbing all the relevant content to be filtered, but I believe there may be merit to implementing a method or option in the constructor that simply says “Hey, anything with these class names is fair game, have at it.” 
+			</p>
+			
+			<p>The implementation of FilterableItem also simplified a good chunk of the code. fadeToggle was instead replaced with a visibility check against a list of active filters and the use of fadeIn and fadeOut. The decision to move away from fadeToggle meant that I no longer needed to track the state of each element, only determine whether or not it was visible after any change. Likewise, the parallel arrays used to track the filter names, and their status were combined into a single map using the filter names as keys and true/false as values to represent the state of the filter.
+			</p>
+			
+			<p>Happy as I was with my new system, I did run into one head scratching complication along the way. I loop through an array containing all of the filter class names when setting up my filter and the checkbox switches that control it. I was surprised to see that my event listeners would fail to “snapshot” the value of the looping variable I needed to pass as a parameter to the toggleFilter function. Instead, they would all return the final value of the loop, meaning that each switch would toggle filter5—not very helpful. A couple of hours later, and I had implemented a closure that would allow me to get my “snapshot” of the variable in the current iteration of the loop.
+			</p>
+			
+			<figure class="midscrn">
+				<img class="centerScrnsht" src="archiveImages/filterPic5.png" />
+				<figcaption class="centerCap">A closure that allows us to set all of the event listeners with only a few lines!</figcaption>
+			</figure>
+			
+			
+			<h1>Looking Ahead</h1>
+			
+			<p>With the current iteration, the change I’d most like to see is the ability to allow the filter to find all of the relevant content on its own—should the developer ask it too. There seems to be little need for the developer to go out of their way and grab each individual element when in the majority of cases the filter can manage it just as well. I also get the feeling that there is a better way to manage the visibility of each individual element, but I am not yet sure as to what that might look like. Allowing developers to define new “filtered” behavior may also extend the utility of the class. Replacing the calls with fadeIn/Out with the ability to gray out, resize, or otherwise manipulate elements on a page may prove particularly useful.
+			</p>
+			
+			<hr />
+			
+			<form id="subscribeBanner">
+				<p style="margin-bottom:.5em">Subscribe for alerts when new articles are posted<p>
+				<div style="text-align:center;">
+					<input type="text" id="subEmail" name="subscriberEmail" value="yourEmail@example.com" /><br />
+					<input type="button" id="subButton" value="Subscribe" /><br />
+					<label for="subscriberEmail" id="subErr"></label>
+				</div>
+			</form>
+		</div>
+		</main>
+		
+		<footer>
+			<div class="flex-grid">
+				<div class="column desktop" id="qLinks">
+					<h3>Quick Links</h3>
+					<ul>
+						<li><a href="../home.html">Home</a></li>
+						<li><a href="../projects.html">Projects</a></li>
+						<li><a href="../articles.html">Articles</a></li>
+						<li><a href="../about.html">About</a></li>
+					</ul>
+				</div>
+				<div class="flex-grid">
+					<div class="column" id="self">
+						<img id="selfPic" src="../images/me.png" />
+					</div>
+					<div class="column" id="selfLinks">
+						<h3>Mike Adams</h3>
+						<a href="mailto:GopherGames.Dev@gmail.com"><img src="../images/email.png" class="bannerIcon" alt="email icon" /> GopherGames.Dev@gmail.com</a><br />
+						<a href="https://www.linkedin.com/in/mike-adams-331881262" rel="noopener noreferrer" target="_blank"><img src="../images/LI-In-Bug.png" class="bannerIcon" alt="LinkedIn icon" /> LinkedIn</a><br />
+						<a href="." rel="noopener noreferrer" target="_blank"><img src="../images/github-mark-white.png" class="bannerIcon" alt="GitHub icon" /> GitHub</a><br />
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+</html>
