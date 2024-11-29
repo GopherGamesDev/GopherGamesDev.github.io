@@ -45,7 +45,7 @@ a:visited {
 
 body {
 	background-color: var(--reseda-green);
-	background-image: linear-gradient(to bottom right, var(--reseda-green), #698a66); 
+	background-image: linear-gradient(to bottom right, #626b61, #6e786d, var(--reseda-green), #7a8679, #879287, #959e94, #a2aaa1); 
 }
 
 #wrapper {
@@ -104,7 +104,7 @@ header {
 
 .navBar{
 	background-color: var(--coffee);
-	background-image: linear-gradient(to bottom right, var(--coffee), #724937);
+	background-image: linear-gradient(to bottom right, var(--coffee), #936753);
 	color: var(--white);
 	position: sticky;
 	top: 0px;
